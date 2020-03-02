@@ -14,6 +14,7 @@ COPY . .
 ENV DATABASE_URL=ecto://me:pass@host/data
 ENV SECRET_KEY_BASE=base
 
+RUN rm -rf _build
 RUN mix distillery.release --env=$MIX_ENV
 
 ########################################################################
